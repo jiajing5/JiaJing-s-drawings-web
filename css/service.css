@@ -1,0 +1,56 @@
+#service > main{
+  height: 80rem;
+}
+#service article{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#service img, #service form{
+  width: 15rem;
+}
+#service form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 20rem;
+  font-size: 0.9rem;
+}
+#service input, #service select{
+  width: 10rem;
+  height: 1.5rem;
+  cursor: pointer;
+  border: 1px solid rgb(70, 136, 169);
+}
+#service button{
+  border-radius: 10% / 50%;
+  border: none;
+  width: 10rem;
+  height: 2rem;
+  background-color: rgb(70, 136, 169);
+  color: white;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+#service button:hover{
+  background-color: rgb(71, 117, 141);
+  box-shadow: 0 0 0.5rem 0 rgb(119, 152, 168);
+}
+@media screen and (min-width:1024px) {
+  #service article{
+    flex-direction: row;
+    width: 90%;
+  }
+  #service img{
+    width: 13rem;
+  }
+  #service form{
+    width: 13rem;
+    height: 18rem;
+  }
+  #service button{
+    font-size: 0.8rem;
+  }
+}

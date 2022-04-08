@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../image/頭像.png">
+    <title>JiaJing's drawings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Barlow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/service.css">
+
+</head>
+<body>
+  <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+  <symbol id="icon-list2" viewBox="0 0 32 32">
+  <path d="M12 2h20v4h-20v-4zM12 14h20v4h-20v-4zM12 26h20v4h-20v-4zM0 4c0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4s-4-1.791-4-4zM0 16c0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4s-4-1.791-4-4zM0 28c0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4s-4-1.791-4-4z"></path>
+  </symbol>
+  <symbol id="icon-cancel-circle" viewBox="0 0 32 32">
+  <path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13z"></path>
+  <path d="M21 8l-5 5-5-5-3 3 5 5-5 5 3 3 5-5 5 5 3-3-5-5 5-5z"></path>
+  </symbol>
+  <symbol id="icon-arrow-down-alt1" viewBox="0 0 32 32">
+  <path d="M16 0c-8.836 0-16 7.164-16 16 0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 24l-8-8h6v-8h4v8h6l-8 8z"></path>
+  </symbol>
+  <symbol id="icon-arrow-up-alt1" viewBox="0 0 32 32">
+  <path d="M16 32c8.836 0 16-7.164 16-16 0-8.837-7.164-16-16-16-8.837 0-16 7.163-16 16 0 8.836 7.163 16 16 16zM16 8l8 8h-6v8h-4v-8h-6l8-8z"></path>
+  </symbol>
+  </defs>
+  </svg>
+  <service id='service'>
+    <header>
+        <svg class="icon hamburger-icon" onclick="open_menu()"><use xlink:href="#icon-list2"></use></svg>
+        <svg class="icon close-icon" onclick="close_menu()"><use xlink:href="#icon-cancel-circle"></use></svg>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="./index.html" class="nav-links" >首頁/Home</a></li>
+            <li><a href="./portfolio.html" class="nav-links">作品集/Portfolio</a></li>
+            <li><a href="#" class="nav-links">似顏繪服務/Service</a></li>
+          </ul>
+        </nav>
+    </header>
+    <main>
+      <h3>似顏繪服務/Service</h3>
+      <article>
+        <img src="../image/似顏繪.jpg">
+        <div>
+          <!-- <h4>似顏繪</h4> -->
+          <form id="form1">
+            <div>
+              <div><label for="name">姓名</label></div>
+              <input type="text" name="name" id="name" required>
+            </div>
+            <div>
+              <div><label for="tel">連絡電話</label></div>
+              <input type="tel" name="tel" id="tel" required>
+            </div>
+            <div>
+              <div><label for="email">聯絡信箱</label></div>
+              <input type="email" name="email" id="email">
+            </div>
+            <div>
+              <div><label for="kind">類型</label></div>
+              <select>
+                <option name="kind" value="半身" id="kind">半身</option>
+                <option name="kind" value="全身" id="kind">全身</option>
+              </select>
+            </div>
+            <div>
+              <div><label for="people">人數</label></div>
+              <input type="number" min="1" step="1" placeholder="1" name="people" id="people" required>
+            </div>
+            <!-- <div>
+              <div>金額</div>
+            </div> -->
+            <button type="submit" form="form1">提交 / Submit</button>
+          </form>
+        </div>
+      </article>
+    </main>
+    <aside id="aside" class="hidden">
+      <svg class="icon icon-arrow-up-alt1"><use xlink:href="#icon-arrow-up-alt1"></use></svg>
+      <svg class="icon icon-arrow-down-alt1"><use xlink:href="#icon-arrow-down-alt1"></use></svg>
+    </aside>
+    <footer>
+      <div>
+        <div>聯絡資訊 / Contact information</div>
+        <div>instagram : jia_jiang.draw</div>
+        <div id="footerEmail">E-mail : a503my@gmail.com</div>
+      </div>
+    </footer>
+  </service>
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js'></script>
+
+  <script  src="../js/script.js"></script>
+
+</body>
+</html>

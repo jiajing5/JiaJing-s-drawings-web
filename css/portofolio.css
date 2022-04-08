@@ -1,0 +1,49 @@
+#portfolio > main{
+  height: 200rem;
+  margin-bottom: 5rem;
+}
+#loading{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-image:-webkit-linear-gradient(60deg,hsl(174, 44%, 77%),rgb(173, 185, 229));
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.icon-spinner3{
+  animation: rotation 2.5s linear infinite;
+}
+@keyframes rotation{
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.igPicOuter, .igPicDailyOuter{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 30vw 30vw 30vw;
+  grid-gap: 7px 7px; 
+}
+.igPic, .igPicDaily{
+  width: 30vw;
+  height: 30vw;
+  overflow: hidden;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 10px;
+}
+/* 照片置中顯示 */
+/* https://www.casper.tw/css/2017/03/22/css-grid-layout/ */
