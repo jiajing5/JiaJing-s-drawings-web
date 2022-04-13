@@ -1,3 +1,6 @@
+let igPic = document.querySelector("#igPic");
+let igPicDaily = document.querySelector("#igPicDaily");
+let loading = document.querySelector("#loading");
 const firebaseConfig = {
   apiKey: "AIzaSyA5qblBFzcCDLRhJDfPH_ee--vUzPMMB64",
   authDomain: "jiajing-s-drawings-web-2680e.firebaseapp.com",
@@ -8,22 +11,23 @@ const firebaseConfig = {
   measurementId: "G-1PJPD09DB4"
 };
 firebase.initializeApp(firebaseConfig);
-let igPic = document.querySelector("#igPic");
-let igPicDaily = document.querySelector("#igPicDaily");
-let loading = document.querySelector("#loading");
 let db = firebase.firestore();
 let docRef = db.collection("ig");
 docRef.get().then(function(querySnapshot) {
+  // console.log(querySnapshot.docs)
     querySnapshot.forEach(function(doc) {
       let igToken = doc.data().igToken;
+      // console.log(doc.data());
+      // console.log(typeof igToken);
       (function show_pic(){
-        // 2022/2/8 ~ 60天
+        // 2022/4/13 ~ 60天
         // if (!clickOne){
         //   clickOne = true;
         //   get_show_pic();
         // }
+        
           const getUserId = 'https://graph.instagram.com/me?access_token=';
-          axios.get(getUserId+igToken)
+          axios.get(String(getUserId+igToken))
           .then(
             response=>{
               // console.log(response.data.id)
@@ -78,4 +82,4 @@ function resetHeight(){
   igPicOuterWraper.style.height = (igPicOuter.offsetHeight+110)+"px";
   igPicDailyOuterWraper.style.height = igPicDailyOuter.offsetHeight+"px";
 //   console.log(typeof igPicOuter.offsetHeight);
-};
+}
